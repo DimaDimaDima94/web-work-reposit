@@ -9,7 +9,7 @@
 
     <style>
         body {
-         background: #191919;
+         background: #191919; // Добавил комментарий
                  
         }
     </style>
