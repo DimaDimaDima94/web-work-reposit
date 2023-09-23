@@ -1,0 +1,350 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Montserrat";
+  src: url("./my-fonts-cirill/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.text-name {
+  color: white;
+  font-size: 140%;
+  font-weight: 600;
+}
+
+.link, a {
+  font-size: 70%;
+  font-weight: 300;
+  color: white;
+}
+.link:hover, a:hover {
+  color: #118da8;
+}
+.link:active, a:active {
+  color: white;
+}
+.link:visited, a:visited {
+  color: #868686;
+}
+
+.foto-big > img {
+  width: 50%;
+  height: 50%;
+}
+
+.foto-medium > img {
+  width: 25%;
+  height: 25%;
+}
+
+.text-big {
+  color: white;
+  font-size: 200%;
+  font-weight: 450;
+  line-height: 140%;
+}
+
+.text-small {
+  color: #868686;
+  font-size: 90%;
+  font-weight: 350;
+  line-height: 155%;
+}
+
+.text-medium {
+  color: white;
+  font-size: 130%;
+  font-weight: 450;
+  line-height: 155%;
+}
+
+.button-quadr > button {
+  background: #118da8;
+  color: white;
+  font-size: 60%;
+  font-weight: 350;
+  line-height: 155%;
+  width: 107px;
+  height: 32px;
+  border-radius: 5px;
+  border: 0px solid #191919;
+}
+
+.tag-episode button {
+  background: #191919;
+  color: #868686;
+  width: 60px;
+  height: 25px;
+  border-radius: 10px;
+  border: 1px solid #191919;
+}
+
+.number-episode {
+  color: #118da8;
+  font-size: 70%;
+  font-weight: 300;
+}
+
+.button-circle > button {
+  background: #118da8;
+  color: white;
+  font-size: 300%;
+  font-weight: 350;
+  line-height: 155%;
+  width: 70px;
+  height: 70px;
+  border-radius: 90px;
+  border: 0px solid #191919;
+}
+
+.box-name > input {
+  background: #191919;
+  color: #868686;
+  border-radius: 10px;
+  height: 45px;
+  border: 0px solid #000000;
+}
+
+.box-email > input {
+  background: #191919;
+  color: #868686;
+  height: 45px;
+  border-radius: 10px;
+  border: 0px solid #000000;
+}
+
+.stars {
+  color: yellow;
+}
+
+.sait {
+  display: block;
+  background: #191919;
+  font-family: "Montserrat";
+  position: relative;
+}
+.sait .heading .name-sait {
+  position: relative;
+  top: 10px;
+  left: 13px;
+}
+.sait .heading .link-sait {
+  position: relative;
+  bottom: 12px;
+  left: 62%;
+}
+.sait .face-sait .face-sait_text {
+  position: relative;
+  bottom: 300px;
+  left: 55%;
+}
+.sait .face-sait .face-sait_icon_S > img {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px; /* Отступ справа */
+  position: relative;
+  bottom: 230px;
+  left: 55%;
+}
+.sait .episodes {
+  position: relative;
+  bottom: 130px;
+}
+.sait .episodes .episodes_heading-text {
+  position: relative;
+  left: 13px;
+}
+.sait .episodes .episodes_button-view {
+  position: relative;
+  bottom: 38px;
+  left: 83%;
+}
+.sait .episodes .episodes_episode-1 {
+  position: relative;
+  margin: 0 13px 10px 13px;
+  background: #000000;
+  border-radius: 13px;
+}
+.sait .episodes .episodes_episode-1 .episode-1_foto {
+  position: relative;
+  top: 13px;
+  left: 13px;
+}
+.sait .episodes .episodes_episode-1 .episode-1_tag {
+  position: relative;
+  bottom: 193px;
+  left: 30%;
+}
+.sait .episodes .episodes_episode-1 .episode-1_number {
+  position: relative;
+  bottom: 175px;
+  left: 31%;
+}
+.sait .episodes .episodes_episode-1 .episode-1_text-big {
+  position: relative;
+  bottom: 160px;
+  left: 30%;
+}
+.sait .episodes .episodes_episode-1 .episode-1_text-small {
+  position: relative;
+  bottom: 160px;
+  left: 30%;
+}
+.sait .episodes .episodes_episode-1 .episode-1_button-view {
+  position: relative;
+  bottom: 150px;
+  left: 30%;
+}
+.sait .episodes .episodes_episode-2 {
+  position: relative;
+  margin: 0 13px 10px 13px;
+  background: #000000;
+  border-radius: 13px;
+}
+.sait .episodes .episodes_episode-2 .episode-2_foto {
+  position: relative;
+  top: 13px;
+  left: 13px;
+}
+.sait .episodes .episodes_episode-2 .episode-2_tag {
+  position: relative;
+  bottom: 193px;
+  left: 30%;
+}
+.sait .episodes .episodes_episode-2 .episode-2_number {
+  position: relative;
+  bottom: 175px;
+  left: 31%;
+}
+.sait .episodes .episodes_episode-2 .episode-2_text-big {
+  position: relative;
+  bottom: 160px;
+  left: 30%;
+}
+.sait .episodes .episodes_episode-2 .episode-2_text-small {
+  position: relative;
+  bottom: 160px;
+  left: 30%;
+}
+.sait .episodes .episodes_episode-2 .episode-2_button-view {
+  position: relative;
+  bottom: 150px;
+  left: 30%;
+}
+.sait .episodes .episodes_episode-3 {
+  position: relative;
+  margin: 0 13px 10px 13px;
+  background: #000000;
+  border-radius: 13px;
+}
+.sait .episodes .episodes_episode-3 .episode-3_foto {
+  position: relative;
+  top: 13px;
+  left: 13px;
+}
+.sait .episodes .episodes_episode-3 .episode-3_tag {
+  position: relative;
+  bottom: 193px;
+  left: 30%;
+}
+.sait .episodes .episodes_episode-3 .episode-3_number {
+  position: relative;
+  bottom: 175px;
+  left: 31%;
+}
+.sait .episodes .episodes_episode-3 .episode-3_text-big {
+  position: relative;
+  bottom: 160px;
+  left: 30%;
+}
+.sait .episodes .episodes_episode-3 .episode-3_text-small {
+  position: relative;
+  bottom: 160px;
+  left: 30%;
+}
+.sait .episodes .episodes_episode-3 .episode-3_button-view {
+  position: relative;
+  bottom: 150px;
+  left: 30%;
+}
+.sait .face-sait-2 .face-sait-2_foto {
+  position: relative;
+  left: 48%;
+}
+.sait .face-sait-2 .face-sait-2_button-circle {
+  position: relative;
+  bottom: 320px;
+  left: 13px;
+}
+.sait .face-sait-2 .face-sait-2_text-big {
+  position: relative;
+  bottom: 300px;
+  left: 13px;
+}
+.sait .face-sait-2 .face-sait-2_text-small {
+  position: relative;
+  bottom: 300px;
+  left: 13px;
+}
+.sait .email {
+  position: relative;
+  bottom: 150px;
+  margin: 0 13px 0px 13px;
+  background: #000000;
+  border-radius: 13px;
+}
+.sait .email .email_text-small {
+  position: relative;
+  top: 65px;
+  left: 26px;
+}
+.sait .email .email_text-small .text-small {
+  color: #118da8;
+  font-size: 55%;
+}
+.sait .email .email_text-big {
+  position: relative;
+  top: 65px;
+  left: 26px;
+}
+.sait .email .email_text-big .text-big {
+  line-height: 120%;
+}
+.sait .email .email_box-name {
+  position: relative;
+  bottom: 35px;
+  left: 50%;
+}
+.sait .email .email_box-email {
+  position: relative;
+  bottom: 25px;
+  left: 50%;
+}
+.sait .email .email_button-view {
+  position: relative;
+  bottom: 15px;
+  left: 50%;
+}
+.sait .box-comment > table tr td {
+  width: 33%;
+  background: #000000;
+  border-radius: 20px;
+  border: 5px solid #191919;
+  padding: 25px;
+}
+.sait #tb {
+  position: relative;
+  top: 30px;
+  width: 100%;
+}
+.sait .iconsS > img {
+  margin-right: 10px; /* Отступ справа */
+}
+.no-new-streng {
+  white-space: nowrap;
+}
+
+table {
+  border-spacing: 17px 0px;
+}
+/*# sourceMappingURL=style.min.css.map */

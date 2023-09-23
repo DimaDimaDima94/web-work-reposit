@@ -1,0 +1,1091 @@
+
+// Написание комментария
+@import "mixins";
+@import "variables";
+
+@font-face {
+    font-family: 'Montserrat';
+    src: 
+        url('./my-fonts-cirill/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+// https://htmlbook.ru/css3-na-primerakh/skruglennye-ugolki
+
+//Это общие классы (многократно-использующиеся)
+// Это все через миксины и инклюде
+.text-name
+{
+    // font-family: Montserrat; // Название шрифта
+    color: $color-white; // Цвет текста
+    font-size: 140%; // Размер текста 
+    font-weight: 600; // Толщина
+}
+
+.link,a{
+    //color: $color-white; // Цвет текста
+    font-size: 70%; // Размер текста 
+    font-weight: 300; // Толщина
+    
+    @include link($color-white,$color-light-blue,$color-white,$color-grey-text);
+}
+
+.foto-big>img{
+    width: 50%;
+    height: 50%;
+}
+
+.foto-medium>img{
+    width: 25%; 
+    height: 25%;
+}
+
+.text-big{
+    color: $color-white;
+    font-size: 200%; // Размер текста 
+    font-weight: 450; // Толщина
+    line-height: 140%; // Между строчное расстояние
+}
+
+.text-small{
+    color: $color-grey-text;
+    font-size: 90%; // Размер текста 
+    font-weight: 350; // Толщина
+    line-height: 155%; // Между строчное расстояние
+}
+
+.text-medium {
+    color: $color-white;
+    font-size: 130%; // Размер текста 
+    font-weight: 450; // Толщина
+    line-height: 155%; // Между строчное расстояние
+}
+
+.icon{
+
+}
+
+.button-quadr>button{
+    background: $color-light-blue;
+    color: $color-white;
+    font-size: 60%; // Размер текста 
+    font-weight: 350; // Толщина
+    line-height: 155%; // Между строчное расстояние
+
+    width: 107px;
+    height: 32px;
+
+    //border-color: $color-fon-dark ;
+    border-radius: 5px;
+
+    border: 0px solid $color-fon-dark;
+}
+
+.tag-episode{
+    button{
+        background: $color-fon-dark;
+        color: $color-grey-text;
+        width: 60px;
+        height: 25px;
+
+        border-radius: 10px;
+
+        border: 1px solid $color-fon-dark;
+    }
+    //background: $color-grey-text;
+}
+
+.number-episode{
+    color: $color-light-blue; // Цвет текста
+    font-size: 70%; // Размер текста 
+    font-weight: 300; // Толщина
+}
+
+.button-circle>button {
+    background: $color-light-blue;
+    color: $color-white;
+    font-size: 300%; // Размер текста 
+    font-weight: 350; // Толщина
+    line-height: 155%; // Между строчное расстояние
+
+    width: 70px;
+    height: 70px;
+
+    //border-color: $color-fon-dark ;
+    border-radius: 90px;
+
+    border: 0px solid $color-fon-dark;
+}
+
+.box-name>input{
+     background: $color-fon-dark;
+     color: $color-grey-text;
+     border-radius: 10px;
+    height: 45px;
+    border: 0px solid $color-fon-black;
+}
+
+.box-email>input {
+    background: $color-fon-dark;
+     color: $color-grey-text;
+     height: 45px;
+     border-radius: 10px;
+     border: 0px solid $color-fon-black;
+}
+
+.stars {
+    color: yellow;
+}
+
+
+//Далее классы одинарные (для место-положения)
+
+// display: block;
+//     color: $color-white;
+//     // font-family: Montserrat;
+//     font-weight: 100%;
+//     // color: rgb(255, 255, 255);
+//     font-size: 80%;
+//     // z-index: 1;
+    
+//     width: 300px; 
+//     height: 50px; 
+//     position: absolute; 
+//     top: 35%; 
+//     left: 2%; 
+//     // right: 50px;
+//     // bottom: 50px;
+//     border: 1px solid black; 
+//     //background:rgb(151, 134, 134);
+
+
+
+.sait{
+    display: block;
+    background: $color-fon-dark;
+    font-family: 'Montserrat';
+    
+    position: relative;
+    .heading{
+        .name-sait {
+            // .text-name
+            position: relative;
+            //bottom: 10px; // вверх
+            top: 10px; // вниз
+            left: 13px; // влево 
+            //right: 10px; // вправо
+        }
+        .link-sait {
+            position: relative;
+            bottom: 12px; // вверх
+            //top: 10px; // вниз
+            left: 62%; // влево 
+            //right: 10px; // вправо
+
+            //line-height: 260%;
+
+
+            // .link-sait_link-home{
+            //     //.link
+            //     position: relative;
+            // bottom: 10px; // вверх
+            // //top: 10px; // вниз
+            // left: 70%; // влево 
+            // //right: 10px; // вправо
+            // }
+            // .link-sait_link-episodes{
+            //     //.link
+            //     position: relative;
+            // bottom: 24px; // вверх
+            // //top: 10px; // вниз
+            // left: 75%; // влево 
+            // //right: 10px; // вправо
+            // }
+            // .link-sait_link-about{
+            //     //.link
+            //     position: relative;
+            // bottom: 37px; // вверх
+            // //top: 10px; // вниз
+            // left: 84%; // влево 
+            // //right: 10px; // вправо
+            // }
+            // .link-sait_link-contact{
+            //     //.link
+            // }
+        }
+    }
+    .face-sait {
+        .face-sait_foto{
+            // .foto-big 
+        }
+        .face-sait_text {
+            // .text-big
+            position: relative;
+            bottom: 300px; // вверх
+            //top: 10px; // вниз
+            left: 55%; // влево 
+            //right: 10px; // вправо
+        }
+        .face-sait_icon_S>img {
+
+            width: 18px;
+            height: 18px;
+            margin-right: 10px; /* Отступ справа */
+            //margin-bottom: 10px; /* Отступ снизу */
+
+            position: relative;
+            bottom: 230px; // вверх
+            //top: 10px; // вниз
+            left: 55%; // влево 
+            //right: 10px; // вправо
+
+            
+            // Иконки площадок
+            // .face-sait_icon_S_icon1{
+            //     // .icon
+            // }
+            // .face-sait_icon_S_icon2{
+            //     // .icon
+            // }
+            // .face-sait_icon_S_icon3{
+            //     // .icon
+            // }
+            // .face-sait_icon_S_icon4{
+            //     // .icon
+            // }
+            // .face-sait_icon_S_icon5{
+            //     // .icon
+            // }
+        }
+
+    }
+    .episodes{
+
+        position: relative;
+        bottom: 130px;
+        //margin-right: 10px;
+        .episodes_heading-text{
+            // .text-big 
+            position: relative;
+            left: 13px;
+        }
+        .episodes_button-view{
+            // .button-quadr
+            position: relative;
+            bottom: 38px; // вверх
+            //top: 10px; // вниз
+            left: 83%; // влево 
+            //right: 10px; // вправо
+        }
+        .episodes_episode-1{
+            position: relative;
+            //bottom: 38px; // вверх
+            //top: 10px; // вниз
+            // left: 13px; // влево 
+            // right: 13px; // вправо
+            margin:0 13px 10px 13px;//top right bottom left
+            background: $color-fon-black;
+            border-radius: 13px;
+            .episode-1_foto{
+                // .foto-medium
+                position: relative;
+            //bottom: 38px; // вверх
+            top: 13px; // вниз
+            left: 13px; // влево 
+            //right: 10px; // вправо
+            }
+            .episode-1_tag{
+                // .episode-1_tag
+                position: relative;
+                bottom: 193px; // вверх
+                //top: 10px; // вниз
+                left: 30%; // влево 
+                // right: 13px; // вправо
+            }
+            .episode-1_number{
+                // .number-episode
+                position: relative;
+                bottom: 175px; // вверх
+                // top: 13px; // вниз
+                left: 31%; // влево 
+                //right: 10px; // вправо
+            }
+            .episode-1_text-big{
+                // .text-big 
+                position: relative;
+                bottom: 160px; // вверх
+                // top: 13px; // вниз
+                left: 30%; // влево 
+                //right: 10px; // вправо
+
+            }
+            .episode-1_text-small {
+                // .text-small
+                position: relative;
+                bottom: 160px; // вверх
+                // top: 13px; // вниз
+                left: 30%; // влево 
+                //right: 10px; // вправо
+            }
+            .episode-1_button-view{
+                // .button-quadr
+                position: relative;
+                bottom: 150px; // вверх
+                // top: 13px; // вниз
+                left: 30%; // влево 
+                //right: 10px; // вправо
+            }
+
+            
+        }
+        .episodes_episode-2{
+            position: relative;
+            //bottom: 38px; // вверх
+            //top: 10px; // вниз
+            // left: 13px; // влево 
+            // right: 13px; // вправо
+            margin:0 13px 10px 13px;//top right bottom left
+            background: $color-fon-black;
+            border-radius: 13px;
+            .episode-2_foto{
+                // .foto-medium
+                position: relative;
+            //bottom: 38px; // вверх
+            top: 13px; // вниз
+            left: 13px; // влево 
+            //right: 10px; // вправо
+            }
+            .episode-2_tag{
+                // .episode-1_tag
+                position: relative;
+                bottom: 193px; // вверх
+                //top: 10px; // вниз
+                left: 30%; // влево 
+                // right: 13px; // вправо
+            }
+            .episode-2_number{
+                // .number-episode
+                position: relative;
+                bottom: 175px; // вверх
+                // top: 13px; // вниз
+                left: 31%; // влево 
+                //right: 10px; // вправо
+            }
+            .episode-2_text-big{
+                // .text-big 
+                position: relative;
+                bottom: 160px; // вверх
+                // top: 13px; // вниз
+                left: 30%; // влево 
+                //right: 10px; // вправо
+
+            }
+            .episode-2_text-small {
+                // .text-small
+                position: relative;
+                bottom: 160px; // вверх
+                // top: 13px; // вниз
+                left: 30%; // влево 
+                //right: 10px; // вправо
+            }
+            .episode-2_button-view{
+                // .button-quadr
+                position: relative;
+                bottom: 150px; // вверх
+                // top: 13px; // вниз
+                left: 30%; // влево 
+                //right: 10px; // вправо
+            }
+
+            
+        }
+        .episodes_episode-3{
+            position: relative;
+            //bottom: 38px; // вверх
+            //top: 10px; // вниз
+            // left: 13px; // влево 
+            // right: 13px; // вправо
+            margin:0 13px 10px 13px;//top right bottom left
+            background: $color-fon-black;
+            border-radius: 13px;
+            .episode-3_foto{
+                // .foto-medium
+                position: relative;
+            //bottom: 38px; // вверх
+            top: 13px; // вниз
+            left: 13px; // влево 
+            //right: 10px; // вправо
+            }
+            .episode-3_tag{
+                // .episode-1_tag
+                position: relative;
+                bottom: 193px; // вверх
+                //top: 10px; // вниз
+                left: 30%; // влево 
+                // right: 13px; // вправо
+            }
+            .episode-3_number{
+                // .number-episode
+                position: relative;
+                bottom: 175px; // вверх
+                // top: 13px; // вниз
+                left: 31%; // влево 
+                //right: 10px; // вправо
+            }
+            .episode-3_text-big{
+                // .text-big 
+                position: relative;
+                bottom: 160px; // вверх
+                // top: 13px; // вниз
+                left: 30%; // влево 
+                //right: 10px; // вправо
+
+            }
+            .episode-3_text-small {
+                // .text-small
+                position: relative;
+                bottom: 160px; // вверх
+                // top: 13px; // вниз
+                left: 30%; // влево 
+                //right: 10px; // вправо
+            }
+            .episode-3_button-view{
+                // .button-quadr
+                position: relative;
+                bottom: 150px; // вверх
+                // top: 13px; // вниз
+                left: 30%; // влево 
+                //right: 10px; // вправо
+            }
+        }
+    }
+
+    .face-sait-2{
+        .face-sait-2_foto{
+            // .foto-big
+            position: relative;
+            //bottom: 150px; // вверх
+            // top: 13px; // вниз
+            left: 48%; // влево 
+            //right: 10px; // вправо
+        }
+        .face-sait-2_button-circle{
+            // .button-circle
+            position: relative;
+                bottom: 320px; // вверх
+                // top: 13px; // вниз
+                left: 13px; // влево 
+                //right: 10px; // вправо
+        }
+    
+        .face-sait-2_text-big{
+            // .text-big
+            position: relative;
+                bottom: 300px; // вверх
+                // top: 13px; // вниз
+                left: 13px; // влево 
+                //right: 10px; // вправо
+
+        }
+        .face-sait-2_text-small{
+            // .text-small
+            position: relative;
+                bottom: 300px; // вверх
+                // top: 13px; // вниз
+                left: 13px; // влево 
+                //right: 10px; // вправо
+        }
+    }
+
+    .email {
+        position: relative;
+        bottom: 150px; // вверх
+        // top: 13px; // вниз
+        //left: 13px; // влево 
+        //right: 10px; // вправо
+
+        margin:0 13px 0px 13px;//top right bottom left
+        background: $color-fon-black;
+        border-radius: 13px;
+
+        .email_text-small{
+            // .text-small
+            position: relative;
+            //bottom: 150px; // вверх
+            top: 65px; // вниз
+            left: 26px; // влево 
+            //right: 10px; // вправо
+            .text-small{
+                color: $color-light-blue;
+                font-size: 55%;
+            }
+            
+        }
+        .email_text-big{
+            // .text-big 
+            position: relative;
+            //bottom: 150px; // вверх
+            top: 65px; // вниз
+            left: 26px; // влево 
+            //right: 10px; // вправо
+            .text-big{
+                line-height: 120%;
+            }
+            
+        }
+        
+        .email_box-name{
+            // .box-name 
+            position: relative;
+            bottom: 35px; // вверх
+            //top: 13px; // вниз
+            left: 50%; // влево 
+            //right: 10px; // вправо
+
+        }
+        .email_box-email{
+            // .box-email 
+            position: relative;
+            bottom: 25px; // вверх
+            //top: 13px; // вниз
+            left: 50%; // влево 
+            //right: 10px; // вправо
+        }
+        .email_button-view{
+            // .button-quadr
+            position: relative;
+            bottom: 15px; // вверх
+            //top: 13px; // вниз
+            left: 50%; // влево 
+            //right: 10px; // вправо
+
+        }
+    }
+
+
+    // Сделано через таблицу
+    .box-comment>table{
+
+        tr{
+            td{
+                width: 33%;
+                background: $color-fon-black;
+                border-radius: 20px;
+                border: 5px solid $color-fon-dark;
+                padding: 25px;
+            }
+        }
+        .box-comment_comment_1 {
+            .comment_1_stars{
+                // .stars 
+            }
+            .comment_1_text-medium{
+                // .text-medium
+            }
+            .comment_1_text-small{
+                // .text-small
+            }
+        }
+
+
+        .box-comment_comment_2 {
+            .comment_2_stars{
+                // .stars 
+            }
+            .comment_2_text-medium{
+                // .text-medium
+            }
+            .comment_2_text-small{
+                // .text-small
+            }
+        }
+
+
+        .box-comment_comment_3 {
+            .comment_3_stars{
+                // .stars 
+            }
+            .comment_3_text-medium{
+                // .text-medium
+            }
+            .comment_3_text-small{
+                // .text-small
+            }
+        }
+
+        .box-comment_comment_4 {
+            .comment_4_stars{
+                // .stars 
+            }
+            .comment_4_text-medium{
+                // .text-medium
+            }
+            .comment_4_text-small{
+                // .text-small
+            }
+        }
+
+        .box-comment_comment_5 {
+            .comment_5_stars{
+                // .stars 
+            }
+            .comment_5_text-medium{
+                // .text-medium
+            }
+            .comment_5_text-small{
+                // .text-small
+            }
+        }
+
+        .box-comment_comment_6 {
+            .comment_6_stars{
+                // .stars 
+            }
+            .comment_6_text-medium{
+                // .text-medium
+            }
+            .comment_6_text-small{
+                // .text-small
+            }
+        }
+    }
+
+    #tb{
+        position: relative;
+        top:30px;
+        width: 100%;
+        
+    }
+    .iconsS>img{
+        margin-right: 10px; /* Отступ справа */
+    }
+
+    .footer{
+        .footer_name-sait{
+            // .text-name
+        }
+
+        .footer_link-sait{
+            .footer_link-sait_link-home{
+                // .link
+            }
+            .footer_link-sait_link-episodes{
+                // .link
+            }
+            .footer_link-sait_link-about{
+                // .link
+            }
+            .footer_link-sait_link-contact{
+                // .link
+            }
+        }
+
+        .footer_link-sait_plus{
+            .footer_link-sait_plus_style{
+                // .link
+            }
+            .footer_link-sait_plus_instruction {
+                // .link
+            }
+            .footer_link-sait_plus_change {
+                // .link
+            }
+            .footer_link-sait_plus_credit {
+                // .link
+            }
+            .footer_link-sait_plus_powered{
+                // .link
+            }
+            .footer_link-sait_plus_licenses{
+                // .link
+            }
+        }
+        // Реализовал через таблицу
+        .footer_icon_S{
+            // width: 18px;
+            // height: 18px;
+            // margin-right: 10px; /* Отступ справа */
+            // //margin-bottom: 10px; /* Отступ снизу */
+
+            .footer_icon_S_icon1{
+                // .icon
+            }
+            .footer_icon_S_icon2{
+                // .icon
+            }
+            .footer_icon_S_icon3{
+                // .icon
+            }
+            .footer_icon_S_icon4{
+                // .icon
+            }
+            .footer_icon_S_icon5{
+                // .icon
+            }
+        }
+    }
+
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// body {
+//     background: $color-fon-dark;
+            
+//    }
+
+// th.name-sait {
+//     text-align: left;
+//     // width: 150%;
+//     // height: 150%;
+// }
+
+// th {
+//     &#_name-sait {
+//      width: 600px;
+//      text-align: left;
+
+//     }
+//   }
+//   th {
+//     &#_link-sait {
+//     //  width: 600px;
+//     text-align: right;
+//     text-decoration: none;
+//     // @include link($color-white,$color-light-blue,$color-fon-black,$color-grey-text);
+//     // font-family: Montserrat;
+//     // font-weight: 40;
+//     // font-size: 58%;
+    
+//     }
+//   }
+
+.no-new-streng{
+    // Без переноса на новую строку
+    white-space: nowrap; 
+}
+
+table{
+    // width: 235%;
+    border-spacing: 17px 0px; 
+    
+    
+}
+
+// @font-face {
+//     font-family: 'Montserrat';
+//     src: 
+//         url('./my-fonts-cirill/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
+// //$link, $hover, $active, $visited
+// a,.link{
+//     display: inline;
+    
+//     text-decoration: none;
+//     @include link($color-white,$color-light-blue,$color-fon-black,$color-grey-text);
+//     font-family: Montserrat;
+//     font-weight: 40;
+//     font-size: 58%;
+    
+//     z-index: 2;
+
+// }
+
+
+
+
+
+// .name-sait{
+//     // display: block;
+//     // color: $color-white;
+//     // // font-family: Montserrat;
+//     // font-weight: 100%;
+//     // // color: rgb(255, 255, 255);
+//     // font-size: 80%;
+//     // // z-index: 1;
+    
+//     // width: 300px; 
+//     // height: 50px; 
+//     // position: absolute; 
+//     // top: 35%; 
+//     // left: 2%; 
+//     // // right: 50px;
+//     // // bottom: 50px;
+//     // border: 1px solid black; 
+//     // //background:rgb(151, 134, 134);
+    
+    
+// }
+
+// .foto-big>img{
+//      width: 50%;
+//      height: 50%;   
+// }
+
+
+
+// .foto-big {
+
+// }
+
+
+// h1{
+//     font-family: Montserrat;
+//     font-weight: 300;
+//     color: rgb(255, 255, 255);
+// }
+// h2{
+//     font-family: Montserrat;
+//     font-weight: 300;
+//     color: white;
+// }
+// h3{
+//     font-family: Montserrat;
+//     font-weight: 300;
+//     color: white;
+// }
+// h4{
+//     font-family: Montserrat;
+//     font-weight: 300;
+//     color: rgb(243, 228, 228);
+// }
+// h5{
+//     font-family: Montserrat;
+//     font-weight: 300;
+//     color: white;
+// }
+// h6{
+//     font-family: Montserrat;
+//     font-weight: 300;
+//     color: white;
+// }
+
+// .table{
+//     // position: relative;
+//     // left: 1%;
+//     // right: 1%;
+//     // bottom: 1%;
+//     // top: 1%;
+    
+// }
+
+// .heading{
+//     position: relative;
+//     z-index: 3;
+    
+//     // top:250%;
+//     font-family: Montserrat;
+//     font-weight: 750;
+//     color: rgb(0, 0, 0);
+//     font-size: 120%;
+// }
+
+// .lager-text{
+    
+//     position: relative;
+//     z-index: 3;
+    
+//     // top:250%;
+//     font-family: Montserrat;
+//     font-weight: 450;
+//     color: rgb(0, 0, 0);
+//     font-size: 200%;
+// }
+
+// #big_text{
+
+// }
+
+// *{
+//     padding: 0;
+//     margin: 0;
+//     background: white;
+// }
+
+// .fon>img {
+    
+//     position: absolute;
+//     z-index: 0;
+//     // top: 1%;
+//     // left:1%;
+//     // right: 1%;
+//     // bottom: 1%;
+//     width: 100%;
+// }
+// .text {
+//     z-index: 2;
+//     // top: 10%;
+//     // left:10%;
+//     // right: 10%;
+//     // bottom: 10%;
+//     position: absolute;
+// }
+// table {
+//     border: #191919;
+    
+    
+//}
+
+
+// @include link(rgb(20, 13, 13),rgb(32, 30, 30),blue,green);
+
+// .header{
+//     @include link(rgb(20, 13, 13),rgb(151, 145, 145),blue,green){
+//         background: rgb(207, 230, 8);
+//     };
+// }
+
+// a{
+//     @include font();
+    
+// }
+
+// .block:not(.first){
+//     @include padd(300px 200px 300px 140px);
+//     background: $bgcolor;
+//     height: 200px;
+//     margin-bottom: 20px;
+//     width: $blockWidthProcent;
+//     border: $border;
+//     color: #ccc;
+
+// }
+// .first{
+//     background: $bgcolor;
+//     height: 200px;
+//     margin-bottom: 20px;
+//     width: $blockWidth;
+    
+// }
+
+// #grid {
+//     float: left;
+//     width: 100%;
+//     > div {
+//         @include grid(6,5%);
+//     }
+// }
+
+// @for $i from 24 to 29 {
+//     .#{$someVar}-#{$i}{
+//         width: 50px + $i;
+//         height: 50px + $i;
+//     }
+// }
+
+
+// #central_block {
+//     padding: 30px;
+
+//     ul {
+//         display: inline-block;
+        
+//         color: rgb(190, 221, 13);
+//     }
+
+//     li {
+//         float: left;
+//         margin-right: 10px;
+//         width: (100% / 4 - 1%)
+        
+//     }
+//     a {
+//         @include font(blue,bold);
+//         //color: green;
+//         &:hover{
+//             color: rgb(192, 166, 166);
+//         }
+//     }
+
+//     // a:hover {
+//     //     color: red;
+//     // }
+
+// }
+// a {
+//     @include font();
+// }
+
+// #central_block > ul {
+//     list-style: none;
+// }
